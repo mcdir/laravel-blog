@@ -9,6 +9,37 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * App\Post
+ *
+ * @property int $id
+ * @property int $author_id
+ * @property string $title
+ * @property string $slug
+ * @property string $content
+ * @property \Carbon\Carbon $posted_at
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property int|null $thumbnail_id
+ * @property-read \App\User $author
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Comment[] $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
+ * @property-read \App\Media|null $thumbnail
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post lastMonth($limit = 5)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post lastWeek()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post latest()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post search($search)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post wherePostedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereThumbnailId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Post extends Model
 {
     use Likeable;

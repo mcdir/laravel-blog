@@ -4,6 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Token
+ *
+ * @mixin \Eloquent
+ */
 class Token extends Model
 {
     /**
