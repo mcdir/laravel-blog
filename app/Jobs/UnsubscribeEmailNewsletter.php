@@ -17,6 +17,8 @@ class UnsubscribeEmailNewsletter implements ShouldQueue
 
     /**
      * Create a new job instance.
+     * UnsubscribeEmailNewsletter constructor.
+     * @param $email
      */
     public function __construct($email)
     {
